@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- 千分位展示 -->
+    <div>input框千分位实现 使用自定义指令实现</div>
     <el-input v-model="iptValue" v-thousandFormat="iptValue" />
-    <div @click="show">{{ realData }}</div>
     <DemoSlot>
       <!-- 具名+作用域插槽 -->
       <template v-slot:header="scope">
@@ -17,11 +17,13 @@
         {{ demoData3 }}
       </template>
     </DemoSlot>
+    <MixinTest></MixinTest>
   </div>
 </template>
 
 <script>
 import DemoSlot from './DemoSlot.vue'
+import MixinTest from './MixinTest.vue'
 
 export default {
   data() {
@@ -29,13 +31,10 @@ export default {
       iptValue: 1111112222222
     }
   },
-  methods: {
-    show() {
-      console.log(this.realData, 'log')
-    }
-  },
+  methods: {},
   components: {
-    DemoSlot
+    DemoSlot,
+    MixinTest
   },
   computed: {
     realData() {
