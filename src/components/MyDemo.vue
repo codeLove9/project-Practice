@@ -18,12 +18,15 @@
       </template>
     </DemoSlot>
     <MixinTest></MixinTest>
+    <div>上传功能组件----------------------------------------------------</div>
+    <FileUpload />
   </div>
 </template>
 
 <script>
 import DemoSlot from './DemoSlot.vue'
 import MixinTest from './MixinTest.vue'
+import FileUpload from './FileUpload.vue'
 
 export default {
   data() {
@@ -34,7 +37,8 @@ export default {
   methods: {},
   components: {
     DemoSlot,
-    MixinTest
+    MixinTest,
+    FileUpload
   },
   computed: {
     realData() {
