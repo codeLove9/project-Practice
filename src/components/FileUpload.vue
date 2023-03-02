@@ -15,7 +15,7 @@
            class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
     </el-upload>
     <div>
-      3.1打卡
+      3.2打卡
     </div>
   </div>
 </template>
